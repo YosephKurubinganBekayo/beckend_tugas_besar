@@ -12,10 +12,10 @@ return new class extends Migration
 
             $table->id();
 
-            $table->foreignId('siswa_id')
-                ->constrained('siswa')
-                ->onDelete('cascade');
-
+            // $table->foreignId('siswa_id')
+            //     ->constrained('siswa')
+            //     ->onDelete('cascade');
+            $table->unsignedBigInteger('siswa_id');
             // simpan vector embedding JSON/string
             $table->longText('embedding');
 
