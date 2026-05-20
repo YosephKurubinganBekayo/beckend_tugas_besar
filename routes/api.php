@@ -16,6 +16,7 @@ use App\Http\Controllers\Api\Spk\SpkCriterionController;
 use App\Http\Controllers\Api\Spk\SpkRankingController;
 use App\Http\Controllers\Api\Spk\SpkScoreController;
 use App\Http\Controllers\Api\UserController;
+use Illuminate\Support\Facades\Broadcast;
 
 Route::post('/register', [
     AuthController::class,
@@ -28,6 +29,7 @@ Route::post('/login', [
 ])->middleware('throttle:login');
 
 Route::middleware('auth:sanctum')->group(function () {
+    Route::post('/broadcasting/auth', fn (Request $request) => Broadcast::auth($request));
 
     Route::get('/me', [
         AuthController::class,

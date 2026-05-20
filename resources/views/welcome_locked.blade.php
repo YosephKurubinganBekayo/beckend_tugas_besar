@@ -62,9 +62,9 @@
     <div class="card">
         <div class="icon">🔐</div>
         <h1>API Documentation</h1>
-        <p>Silakan masukkan kunci akses untuk melihat dokumentasi teknis.</p>
+        <p>Masukkan API key dokumentasi untuk melihat seluruh endpoint, instalasi, real-time, dan chatbot integrasi.</p>
         <form action="/" method="GET">
-            <input type="password" name="key" placeholder="Access Key..." required autofocus>
+            <input type="password" name="key" placeholder="Documentation API Key..." required autofocus>
             <button type="submit">Buka Dokumentasi</button>
         </form>
     </div>
